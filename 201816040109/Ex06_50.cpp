@@ -9,13 +9,14 @@ void tripleByReference(int &flag);  //声明tripleByReference函数
 int main() {
 
     int count = 0;
-    cin >> count;                   //输入count的值
-    count = tripleByValue(count);   //调用tripleByValue函数将count值变为原来的三倍
-    cout << count << endl;          //输出count改变后的值
-    cin >> count;                   //再次输入count的值
-    int &flag = count;              //flag是一个初始化为count的整型引用
-    tripleByReference(flag);        //调用tripleByReference函数
-    cout << count << endl;          //输出count改变后的值
+    cout << "Enter a value for count: ";
+    cin >> count;
+    cout << "Value of count before call to tripleByValue() is: " << count << endl;
+    cout << "Value returned from tripleByValue() is: " << tripleByValue(count) << endl;
+    cout << "Value of count (in main) after tripleCallByValue() is: " << count << endl;
+    cout << "Value of count before call to tripleByReference() is: " << count << endl;
+    tripleByReference(count);
+    cout << "Value of count (in main) after call to tripleByReference() is: " << count << endl;
     return 0;
 }
 
