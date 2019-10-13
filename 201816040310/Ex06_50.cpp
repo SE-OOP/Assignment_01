@@ -9,7 +9,7 @@ void tripleByReference(int &); // function prototype
 int main()
 {
    int conut;
-   cout << "Enter a conut for count:";
+   cout << "Enter a value for count:";
    cin >> conut;  //read a number
    cout << endl;
 
