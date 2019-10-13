@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int TripleByValue(int a);
+void TripleByReference(int &t);
+int main()
+{
+    int a,b;
+    cout<<"Enter a value for count:";
+    cin>>a;
+    b=TripleByValue(a);
+    cout<<"Value returned from tripleByValue() is:"<<b<<endl;
+    cout<<"Value of count (in main) after tripleCallByValue() is:"<<a<<endl;
+    cout<<endl;
+    cout<<"Value of count before call to tripleByReference() is:"<<a<<endl;
+    TripleByReference(a);
+    cout<<"Value of count (in main) after call to tripleByReference() is:"<<a;
+    return 0;
+}
+int TripleByValue(int a)
+{
+    int b;
+    b=a*3;
+    return b;
+
+
+}
+void TripleByReference(int &t)
+{
+    t=t*3;
+
+}
