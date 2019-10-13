@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+int tripleByValue(int x)
+{
+    return 3*x;
+}
+void tripleByReference(int & x)
+{
+    x=3*x;
+}
+int main()
+{
+
+    int count=1;
+    cout<<"传入函数前count="<<count<<endl;
+    int a=tripleByValue(count);
+    cout<<"返回值a="<<count<<endl;
+    cout<<"传入函数后count="<<count<<endl;
+    cout<<"引用传入前count="<<count<<endl;
+    tripleByReference(count);
+    cout<<"引用传入后count="<<count;
+    return 0;
+}
