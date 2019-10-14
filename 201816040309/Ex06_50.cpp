@@ -27,4 +27,5 @@ int main()
     tripeByReference(x); //按参数传递则在原变量的地方更改
     cout <<"Value of count (in main) after call to tripleByReference() is:"<<x<<"\n";
 
+    
 }
