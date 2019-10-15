@@ -1,6 +1,6 @@
 #include <iostream>  //allows program to output date to the screen
 
-using namespace std;  //programs uses std
+using namespace std;   //programs uses std
 
 //function main begins program execution
 int main()
