@@ -2,15 +2,9 @@
 
 using namespace std;   //programs uses std
 
-int tripByValue(int x)
-{
-    return x*3;
-}
+int tripByValue(int x) ;
 
-int tripByReference(int &x)
-{
-    return x*3;
-}
+int tripByReference(int &x) ;
 
 //function main begins program execution
 int main()
@@ -21,5 +15,14 @@ int main()
     cout << "输出(三倍)" << endl;//prompt user for data
     cout<<"第一种:"<<tripByValue(count)<<endl;//print read a integer
     cout<<"第二种:"<<tripByReference(count)<<endl;//print read a integer
-    return 0;
 }//end function main
+
+int tripByValue(int x)
+{
+    return x*3;
+}
+
+int tripByReference(int &x)
+{
+    return x*3;
+}
