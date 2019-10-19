@@ -6,6 +6,7 @@ int tripByValue(int a )
 	return a*3;
  } 
 void tripleByReference(int &a)
+
 {
 	a=a*3;
 }
