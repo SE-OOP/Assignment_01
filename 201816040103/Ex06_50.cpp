@@ -10,13 +10,11 @@ void tripleByReference(int &a)
 	a=a*3;
 }
 int main(int argc, char** argv) {
-	int count,b;
+	int count,w;
 	cin>>count;
-	b=tripByValue(count);
-	 cout<<b;
-	 cout<<endl;
+	w=tripByValue(count);
+	 cout<<w<<endl;
 	 tripleByReference(count);
-	 cout<<count;
-	 cout<<endl;
+	 cout<<count<<endl;
 	return 0;
 }
