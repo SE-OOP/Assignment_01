@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-int tripByValue(int a )
+int tripByValue(int a )//按值传递函数；
 {
 	return a*3;
  } 
-void tripleByReference(int &a)
+void tripleByReference(int &a)//按引用传递函数；
 {
 	a=a*3;
 }
