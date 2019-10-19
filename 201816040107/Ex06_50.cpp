@@ -9,7 +9,7 @@ void tripleByReference(int &a)//按引用传递函数；
 {
 	a=a*3;
 }
-int main(int argc, char** argv) {
+int main(int argc, char** argv) { 
 	int count,b;
 	cin>>count;
 	b=tripByValue(count);
