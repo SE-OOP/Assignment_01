@@ -1,16 +1,16 @@
 #include <iostream>
 
 using namespace std;
-int tripleByValue(int num){
+int tripleByValue(int num){//函数：按值传递，不该变本身的值
     return 3*num;
 }
-void tripleByReference(int & num){
+void tripleByReference(int & num){//函数：按引用传递，该变本身的值
     num=3*num;
 }
 
 int main()
 {
-    int count=10;
+    int count=0;//声明并初始化
     cout<<"请输入一个整数count:";
     cin>>count;
     cout<<"调用tripleByValue()函数之前count的值为:"<<count<<endl;
