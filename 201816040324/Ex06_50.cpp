@@ -21,8 +21,8 @@ int main()
 int tripleByVlaue (int number)
 {
      return number =3*number ;
-}//值传递
+}
 void tripleByReference (int &numberref)
 {
     numberref =3*numberref ;
-}//引用传递
+}
