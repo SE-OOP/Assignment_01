@@ -1,28 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int cal0(int val) {		//calling function by value
-	return val * 3;
+int tripleByValue(int Value) {		//calling function by value
+	return Value * 3;
 }
 
-void cal1(int &val) {	//calling function by reference
-	val *= 3;
+void tripleByReference(int &Value) {	//calling function by reference
+	Value *= 3;
 }
 
 int main() {
-	int count = 0;		//an invalid initialization
-	cout << "Before calling function：count = " << count;
-	cout << "\nThe result of the first function：" << cal0(count);		//the first result
-	cout << "\nThe result of the second function：";
-	cal1(count);
-	cout << count << "\n\nemmmmm...\nThis value doesn't seem to work... Try another value.\n";	//the socond result
+	int count = 0;	//initialization of count
+	cout << "Enter a value for count: ";
+	cin >> count;	//Assign values to count
 
-	count = 10;			//a valid initialization
-	cout << "\nBefore calling function：count = " << count;
-	cout << "\nThe result of the first function：" << cal0(count);		//the first result
-	cout << "\nThe result of the second function：";
-	cal1(count);
-	cout << count;		//the socond result
-	cout << "\n\nThat's right. Yeah! o(*￣▽￣*)ブ \n\n";
+	cout << "\nValue of count before call to tripleByValue() is: " << count << "\n";			//Value of count before call to tripleByValue()
+	cout << "Value returned from tripleByValue() is: " << tripleByValue(count) << "\n";			//Value returned from tripleByValue()
+	cout << "Value of count (in main) after tripleCallByValue() is: " << count << "\n\n";		//Value of count (in main) after tripleCallByValue()
+
+	cout << "Value of count before call to tripleByReference() is: " << count << "\n";			//Value of count before call to tripleByReference()
+	tripleByReference(count);
+	cout << "Value of count (in main) after call to tripleByReference() is: " << count << "\n";	//Value of count (in main) after call to tripleByReference()
 	return 0;
 }
+/*
+Enter a value for count: 10
+
+Value of count before call to tripleByValue() is: 10
+Value returned from tripleByValue() is: 30
+Value of count (in main) after tripleCallByValue() is: 10
+
+Value of count before call to tripleByReference() is: 10
+Value of count (in main) after call to tripleByReference() is: 30
+*/
