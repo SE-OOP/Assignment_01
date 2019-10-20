@@ -1,0 +1,41 @@
+// Homework. 6.50
+// Comparing pass-by-value and pass-by-reference with references.
+#include <iostream>
+using namespace std;
+
+int tripleByValue(int number); // function prototype(value pass)
+void tripleByReference(int &numberRef); // function prototype(reference pass)
+
+
+int main()
+{
+    int count,a; // value to square using tripleByReference
+    cout << "please set a number: ";
+    cin >> count;// read value from user
+    a=count;  // value to square using tripleByValue
+
+    // demonstrate tripleByValue
+    cout << "count = " << count << "(before tripleByValue)" << endl ;
+    cout << "count = " << tripleByValue(a) << "(Value return by tripleByValue)" <<endl;
+    cout << "count = " << a << "(after tripleByValue)" << endl ;
+    cout << endl;
+
+    // demonstrate tripleByReference
+    cout << "count = " << count << "(before tripleByReference)" << endl ;
+    tripleByReference(count);
+    cout << "count = " << count << "(after tripleByReference)" << endl ;
+
+    return 0;
+} // end main
+
+// tripleByValue function pass-by-value
+int tripleByValue(int number)
+{
+    return number *=3;
+} //end function tripleByValue
+
+// tripleByReference
+void tripleByReference(int &numberRef)
+{
+    numberRef *=3;
+} //end function tripleByReference
