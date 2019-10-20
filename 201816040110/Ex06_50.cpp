@@ -19,10 +19,10 @@ int main()
 
 int dischange ( int number1 )
 {
-    return number1 *= number1;
+    return number1 = number1 * 3;
 }
 
 void change ( int &number2 )
 {
-    number2 *= number2;
+    number2 = number2 * 3;
 }
