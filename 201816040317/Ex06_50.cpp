@@ -7,18 +7,18 @@ void tripleByReference(int & );//pass-by-reference
 
 int main()
 {
-    int count1,count2;
+    int count;
 
-    cin>>count1;
-    cin>>count2;
+    cout<<"Enter a value for count:";
+    cin>>count;
 
-    cout<<"count1="<<count1<<"  before tripleByValue\n";
-    cout<<tripleByValue(count1)<<endl;
-    cout<<"count1="<<count1<<"  after tripleByValue\n"<<endl;
 
-    cout<<"count2="<<count2<<"  before ripleByReferencee\n";
-    tripleByReference(count2);
-    cout<<"count2="<<count2<<"  after ripleByReference\n"<<endl;
+    cout<<"Value of count before call to tripleByValue() is:"<<count<<endl;
+    cout<<"Value returned from tripleByValue() is:"<<tripleByValue(count)<<endl;//打印调用tripleByValue()函数后的值
+    cout<<"Value of count (in main) after tripleCallByValue() is"<<count<<endl<<endl;//打印调用tripleByValue()函数后的形参的值
+
+    cout<<"Value of count before call to tripleByReference() is:"<<count<<endl;
+    cout<<"Value of count (in main) after call to tripleByReference() is:"<<count<<endl;//打印调用tripleByReference()后的count的值
 
     return 0;
 }
