@@ -1,0 +1,28 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int tripleByValue(int n)
+{
+	n *= 3;
+	return n;
+}
+void tripleByReference(int* n) 
+{
+	(*n) *= 3;
+}
+int main() 
+{
+	int  n;
+	cout << "Enter a value for count: ";
+	cin >> n;
+	cout << endl;
+	cout << endl;
+	cout << "Value of count before call to tripleByValue() is: " << n << endl;
+	cout << "Value returned from tripleByValue() is: " << tripleByValue(n) << endl;
+	cout << "Value of count (in main) after tripleCallByValue() is: " << n << endl;
+	cout << endl;
+	cout << "Value of count before call to tripleByReference() is: " << n << endl;
+	tripleByReference(&n);
+	cout << "Value of count (in main) after call to tripleByReference() is: " << n << endl;
+	return 0;
+}
