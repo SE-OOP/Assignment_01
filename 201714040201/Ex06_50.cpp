@@ -36,3 +36,6 @@ void tripleByReference(int& conut)
 {
 	conut *= 3; //let conut *3
 }
+
+//This version was different from the one you submitted. 
+//But it is a good beginning for you. 
