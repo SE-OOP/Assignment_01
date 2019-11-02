@@ -34,3 +34,5 @@ int  tripleByValue( int number){
 void tripleByReference( int &number ){
 	number=number*3;
 }
+
+//Reviews: Excellent. Keep up good work.
