@@ -22,3 +22,5 @@ int main()
     cout<<"引用传入后count="<<count;
     return 0;
 }
+// No comments.
+// English is prefered for the output messages.
